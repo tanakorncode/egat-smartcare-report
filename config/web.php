@@ -12,6 +12,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'homeUrl' => '/report',
     'name' => 'EGAT Smartcare Report',
     # ตั้งค่าการใช้งานภาษาไทย (Language)
     'language' => 'th-TH', // ตั้งค่าภาษาไทย
