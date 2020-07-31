@@ -58,7 +58,7 @@ class QueueController extends Controller
         $service = TblService::findOne($queueDetail['service_id']);
         $group = TblServiceGroup::findOne($service['service_group_id']);
         $ticket = TblTicket::findOne($service['ticket_id']);
-        $queue_time = $formatter->asDate($queueDetail['queue_time'], 'php:d F ').($formatter->asDate($queueDetail['queue_time'], 'php:Y') + 543);
+        $queue_time = $formatter->asDate($queueDetail['queue_time'], 'php:d F ') . ($formatter->asDate($queueDetail['queue_time'], 'php:Y') + 543) . ' ' . $formatter->asDate($queueDetail['queue_time'], 'php:H:i น.');
         $ticket_template = strtr($ticket['ticket_template'], [
             '{hn}' => $patient['hn'], // เลขประจำตัวผู้ป่วย
             '{queue}' => $queue['queue_no'], // หมายเลขคิว
