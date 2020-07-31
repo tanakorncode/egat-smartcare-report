@@ -51,16 +51,16 @@ $config = [
         ],
         'db' => $db,
         
-        'urlManager' => [
-            'baseUrl' => $baseUrl,
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-            ],
-        ],
+        // 'urlManager' => [
+        //     'baseUrl' => $baseUrl,
+        //     'enablePrettyUrl' => true,
+        //     'showScriptName' => false,
+        //     'rules' => [
+        //         '<controller:\w+>/<id:\d+>' => '<controller>/view',
+        //         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+        //         '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+        //     ],
+        // ],
         'formatter' => [
             'class' => 'yii\i18n\Formatter',
             'nullDisplay' => '',
