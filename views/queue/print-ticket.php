@@ -45,11 +45,11 @@ $this->registerJsFile(
     '@web/js/qrcode.min.js',
     ['depends' => [\yii\web\JqueryAsset::className()]]
 );
-/*
+
 $this->registerJs(<<<JS
 document.title = 'พิมพ์บัตรคิว';
 
-for (x = 0; x < copy; x++) {
+/* for (x = 0; x < copy; x++) {
     // qrcode
     if($("#qrcode"+x)) {
         new QRCode(document.getElementById("qrcode"+x), {
@@ -69,7 +69,7 @@ for (x = 0; x < copy; x++) {
             margin: 0
         });
     }
-}
+} */
 
 $('p[data-f-id="pbf"]').remove()
 $(window).on('load', function() {
@@ -80,5 +80,5 @@ $(window).on('load', function() {
 });
 JS
 );
-*/
+
 ?>
