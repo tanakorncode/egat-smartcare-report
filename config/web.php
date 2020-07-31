@@ -52,10 +52,13 @@ $config = [
         'db' => $db,
         
         'urlManager' => [
-            'baseUrl' => 'https://smartcare.egat.co.th/api/report',
+            'baseUrl' => $baseUrl,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ],
         ],
         'formatter' => [
