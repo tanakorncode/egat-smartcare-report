@@ -49,6 +49,15 @@ $this->registerJsFile(
 $this->registerJs(<<<JS
 document.title = 'พิมพ์บัตรคิว';
 
+$('p[data-f-id="pbf"]').remove()
+$(window).on('load', function() {
+    window.print();
+    window.onafterprint = function(){
+        window.close();
+    }
+});
+JS
+);
 /* for (x = 0; x < copy; x++) {
     // qrcode
     if($("#qrcode"+x)) {
@@ -70,15 +79,4 @@ document.title = 'พิมพ์บัตรคิว';
         });
     }
 } */
-
-$('p[data-f-id="pbf"]').remove()
-$(window).on('load', function() {
-    window.print();
-    window.onafterprint = function(){
-        window.close();
-    }
-});
-JS
-);
-
 ?>
